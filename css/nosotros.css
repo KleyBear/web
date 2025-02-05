@@ -1,0 +1,103 @@
+.proposito{
+    margin: 5px 10px 0 10px;
+	padding: 5px;
+	border: solid powderblue;
+	border-radius: 20px;
+	background-color: rgb(229, 224, 255);
+	display: inline-flex;
+}
+.objetivo{
+	text-align: justify;
+	border: solid 2px rgb(109, 0, 252);
+	background-color: white;
+	margin: 20px;
+	height: 555px;
+	width: 339px;
+	padding: 10px;
+	color: gray;
+	font-family: monospace;
+}
+h2{
+	font-family: 'Trebuchet MS';
+	text-align: center;
+	font-size: 25px;
+	margin: 5px 0 5px 0;
+	color: black;
+}
+h3{
+    text-align: center;
+    font-size: 2em;
+    margin: -15px 0 0 0;
+}
+img{
+	border-radius: 5%;
+	border: solid 2px rgb(109, 0, 252);
+	margin: 15px 15px 15px 15px;
+	width: 1px;
+	height: 400px;
+}
+ul{
+    list-style: none;
+    margin-top: -5px;
+}
+li{
+	color: black;
+	padding: 0;
+	margin: 0 5% 0 15%;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+/* Estilos del carrusel */
+.carrusel {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden; 
+    border-radius: 10px;
+}
+
+.carrusel .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 98%;
+    box-sizing: border-box;
+}
+
+.carrusel img {
+    width: 100%;
+    border-bottom: 2px solid #ccc;
+}
+
+
+.carrusel h2 {
+    text-align: center;
+}
+
+.carrusel ul {
+    padding: 0 20px;
+}
+
+/* Botones de navegación */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}

@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*Reset CSS*/
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../assets/Imagenes/colores-pastel.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+/*Navegación*/
+
+.contenedor{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 85%;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+header{
+    width: 100%;
+    height: 100vh;
+}
+nav{
+    height: 100px;
+    max-width: 1200px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 40px;
+    margin-left: 40px;
+}
+.bar-btn{
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    margin-right: 30px;
+    cursor:grab;
+}
+.nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgba(150, 216, 255, 0.95);
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 2;
+}
+.nav-menu li {
+    display:none;
+    line-height: 100px;
+    margin: 0;
+    transition: all 0.5s;
+}
+.nav-menu li a{
+    color: #000000;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.nav-menu li a.active,
+.nav-menu li a:hover{
+    color: gray;
+    transition: 0.3s;
+}
+#check{
+    display: none;
+}
+#check:checked ~ .nav-menu{
+    height: 100vh;
+}
+#check:checked ~ .nav-menu li{
+    display: block;
+}
+.banner-text{
+    padding-top: 10px;
+    text-align: center;
+}
+.banner-text h1{
+    color: #000000;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.banner-text p{
+    color: #000000;
+    font-size: 18px;
+    padding: 30px;
+}
+#btn-a{
+    display: inline-block;
+    background-color:  rgb(255, 255, 255);
+    color: black;
+    margin-top: 30px;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    border-radius: 25px;
+}
+#btn-a:hover{
+    background-color: aqua;
+}
+@media (min-width:768px) {
+    .logo{
+        margin-left: 0;
+    }
+    body{
+        height: 100vh;
+    }
+    nav{
+        height: 100px;
+        margin: 0 auto;
+    }
+    .bar-btn{
+        display: none;
+    }
+    .nav-menu{
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+    .nav-menu li{
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+    .nav-menu li a{
+        font-size: 18px;
+    }
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .banner-text{
+        padding-top: 100px;
+    }
+    .banner-text h1{
+        font-size: 55px;
+    }
+    .banner-text p{
+        padding: 30px 200px;
+    }
+}

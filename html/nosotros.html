@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/nosotros.css">
+</head>
+<body>
+    <h3>Sobre nosotros</h3>
+    <div class="carrusel">
+        <div class="slides">
+            <div class="slide">
+                <h2>MÍSIÓN</h2>
+                <img src="../assets/Imagenes/mision.png" alt="Misión">
+                <ul>
+                    <li>Hacer que las matemáticas sean divertidas y accesibles para todos los niños de sexto grado, fomentando su curiosidad y ayudándoles a desarrollar habilidades de pensamiento crítico y resolución de problemas.</li>
+                    <li>Convertir el aprendizaje de las matemáticas en una experiencia positiva y enriquecedora, inspirando a los niños a explorar el mundo de los números con entusiasmo.</li>
+                    <li>Proporcionar un recurso educativo complementario de alta calidad que apoye a los estudiantes de sexto grado en su aprendizaje de las matemáticas, tanto dentro como fuera del aula.</li>
+                </ul>
+            </div>
+
+            <div class="slide">
+                <h2>VISIÓN</h2>
+                <div class="vimg">
+                <img src="../assets/Imagenes/vision.png" alt="Visión">
+            </div>
+                <ul>
+                    <li>Ser la plataforma de aprendizaje de matemáticas más querida y efectiva para niños de sexto grado, reconocida por su contenido innovador y su capacidad para despertar el amor por las matemáticas.</li>
+                    <li>Crear una comunidad en línea donde los niños puedan aprender, compartir y colaborar en el aprendizaje de las matemáticas de manera divertida y significativa.</li>
+                    <li>Empoderar a los niños para que se conviertan en pensadores matemáticos independientes y seguros de sí mismos, capaces de aplicar sus conocimientos en la vida real.</li>
+                </ul>
+            </div>
+
+            <div class="slide">
+                <h2>OBJETIVOS</h2>
+                <img src="../assets/Imagenes/objetivo.png" alt="Objetivos">
+                <ul>
+                    <li>Disfruten aprendiendo matemáticas.</li>
+                    <li>Desarrollen habilidades de pensamiento crítico y resolución de problemas.</li>
+                    <li>Adquieran confianza en sus capacidades matemáticas.</li>
+                    <li>Estén mejor preparados para enfrentar los desafíos matemáticos del futuro.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Botones de navegación -->
+        <button class="nav-button prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="nav-button next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- Script para el carrusel -->
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+
+            if (index >= totalSlides) {
+                currentSlide = 0; // Regresar al primer slide
+            } else if (index < 0) {
+                currentSlide = totalSlides - 1; // Ir al último slide
+            } else {
+                currentSlide = index; // Mostrar el slide correspondiente
+            }
+
+            slides.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+        }
+
+        function moveSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        // Mostrar el primer slide al cargar
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>
